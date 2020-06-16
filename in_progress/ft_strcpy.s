@@ -1,18 +1,21 @@
 	global _ft_strcpy
 
 _ft_strcpy:
-	xor	rdx, rdx
-	xor	rcx, rcx
-	mov	rax, rdi
-	ret
+    xor        rax, rax
+    xor        rdx, rdx
+    cmp        rdi, 0
+    je        _return
+    cmp        rsi, 0
+    je        _return
 
-_while_loop:
-	mov	dl, byte [rsi + rcx]
-	mov	byte [rax + rcx], dl
-	cmp	dl, 0
-	je	_return
-	inc	rcx
-	jmp	_while_loop
+_loop:
+    mov        dl, byte [rsi + rax]
+    mov        byte [rdi + rax], dl
+    cmp        dl , 0
+    je        _return
+    inc        rax
+    jmp        _loop
 
 _return:
-	ret
+    mov        rax, rdi
+    ret

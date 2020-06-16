@@ -1,7 +1,7 @@
 	global _ft_strlen
 
 _ft_strlen:
-	xor	rax, rax	; initialise rax equal to mov	rax, 0
+	xor	rax, rax
 	cmp	rdi, 0
 	je	_return
 
