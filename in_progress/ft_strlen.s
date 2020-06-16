@@ -1,10 +1,9 @@
 	global _ft_strlen
-	section	.text
 
 _ft_strlen:
-	xor	rax, rax
+	xor	rax, rax	; initialise rax equal to mov	rax, 0
 	cmp	rdi, 0
-	je	return
+	je	_return
 
 _while_loop:
 	cmp	byte [rdi + rax], 0

@@ -6,7 +6,7 @@
 /*   By: pmaldagu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 12:02:10 by pmaldagu          #+#    #+#             */
-/*   Updated: 2020/03/15 19:50:36 by pmaldagu         ###   ########.fr       */
+/*   Updated: 2020/06/16 14:13:01 by pmaldagu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 int main()
 {
-	//char *str = "coucou";
+	//char *str = "cocou";
 	//char *str2 = "sal";
 
-	//printf("==========TEST==========\n");
-	//printf("result = %zu\n", ft_strlen("coucou"));
-	//printf("result = %d\n", ft_strcmp("coucou", "sal"));
-	printf("result = %s\n", ft_strcpy("coucou", "salsal"));
+	printf("==========TEST==========\n");
+	printf("result = %zu\n", ft_strlen(NULL));
+	printf("result = %d\n", ft_strcmp("coucou", "coudou"));
+	printf("strcmp = %d\n", strcmp("coucou", "coudou"));
+	//printf("result = %s\n", ft_strcpy("coucou", "salsal"));
 	//printf("===========END==========\n");
 	return (0);
 }
