@@ -10,8 +10,8 @@
 
 - [x] ft_strlen.s
 - [x] ft_strcmp.s
-- [ ] ft_strcpy.s
-- [ ] ft_strdup.s
+- [x] ft_strcpy.s
+- [x] ft_strdup.s
 - [ ] ft_write.s
 - [ ] ft_read.s
 
