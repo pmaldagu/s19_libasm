@@ -1,5 +1,6 @@
 SRC = ft_strlen.s \
-      ft_strcmp.s
+      ft_strcmp.s \
+      ft_strcpy.s
 
 OBJS = $(SRC:.s=.o)
 
