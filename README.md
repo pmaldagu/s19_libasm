@@ -6,7 +6,7 @@
 
 ## Status
 
-### In progress
+### Waiting for correction
 
 - [x] ft_strlen.s
 - [x] ft_strcmp.s
