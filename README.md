@@ -15,6 +15,9 @@
 - [x] ft_write.s
 - [x] ft_read.s
 
+### Updates
+- [ ] for linux
+
 ## Ressources
 
 - [Assembleur - Notions de base](https://beta.hackndo.com/assembly-basics/)
