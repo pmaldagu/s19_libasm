@@ -12,8 +12,8 @@
 - [x] ft_strcmp.s
 - [x] ft_strcpy.s
 - [x] ft_strdup.s
-- [ ] ft_write.s
-- [ ] ft_read.s
+- [x] ft_write.s
+- [x] ft_read.s
 
 ## Ressources
 
