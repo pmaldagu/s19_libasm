@@ -1,26 +1,27 @@
-	global	ft_strdup
+	global ft_strdup
 	extern	malloc
-	extern	ft_strcpy
 	extern	ft_strlen
+	extern	ft_strcpy
 
 ft_strdup:
-	xor	rax, rax
-	xor	rsi, rsi
+	xor		rax, rax
+	xor		rsi, rsi
+	cmp		rdi, 0
+	je		return
 
+dup:
 	push	rdi
 	call	ft_strlen
-	mov	rdi, rax
-	inc	rdi
+	mov		rdi, rax
+	inc		rdi
 	call	malloc
-	cmp	rax, 0
-	je	error
-	pop	rsi
-	mov	rdi, rax
+	cmp  	rax, 0
+	je		return
+	pop		rsi
+	mov		rdi, rax
 	call	ft_strcpy
-
-return:
 	ret
 
-error:
-	mov	rax, 0
+return:
+	mov		rax, -1
 	ret

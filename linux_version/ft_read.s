@@ -1,11 +1,11 @@
-	global ft_read
+	global	ft_read
 
 ft_read:
-	mov	rax, 0
+	mov		rax, 0x2000003
 	syscall
-	jc	error
+	jc		return
 	ret
 
-error:
-	mov	rax, -1
+return:
+	mov		rax, -1
 	ret

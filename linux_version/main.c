@@ -30,11 +30,11 @@ int main()
 	printf("ft_strcpy = %s\n", ft_strcpy(dest, "sf"));
 	printf("strcpy = %s\n\n", ft_strcpy(dest, "sifasafasfsa"));
 	/*ft_strdup*/
-	//printf("ft_strdup = %s\n", ft_strdup("couc"));
+	printf("ft_strdup = %s\n", ft_strdup("couc"));
 	printf("strdup = %s\n\n", strdup("couc"));
 	/*ft_write*/
 	printf("%zu\n", ft_write(1, "aabxbc", 4));
-	printf("%zu\n", write(1, "aabxbac", 4));
+	printf("%zu\n\n", write(1, "aabxbac", 4));
 	printf("===========END==========\n");
 
 	int		fd;
@@ -48,7 +48,7 @@ int main()
 	}
 	fd = open("./test.txt", O_RDONLY);
 	printf("%zd\n",ft_read(fd, buffer, 39));
-	printf("buffer||%s\n", buffer);
+	printf("buffer|%s\n", buffer);
 
 	return (0);
 }
