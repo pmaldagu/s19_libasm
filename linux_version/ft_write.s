@@ -2,19 +2,31 @@
 	extern	__errno_location
 
 ft_write:
-	;cmp		rsi, 0
-	;je		return
+	xor		rax, rax
+	xor		rcx, rcx
+	cmp		rsi, 0
+	je		return
 	push	rsi
 	mov		rsi, 1		;Value of the cmd F_GETFD, return fd flags, for fcntl
 	mov		rax, 72		;syscall fctnl
 	syscall
 	pop		rsi
 	cmp		rax, 0
-	jne		return
+	jne		error
 	mov		rax, 1		;syscall write
 	syscall
 	ret
 
 return:
+	mov		rax, -1
+	ret
+	
+error:
+	mov		rcx, rax
+	neg		rcx
+	push	rcx
+	call	__errno_location
+	pop		rcx
+	mov		[rax], rcx
 	mov		rax, -1
 	ret
