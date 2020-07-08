@@ -3,7 +3,7 @@
 ft_read:
 	mov		rax, 0
 	syscall
-	jc		return
+	;jc		return
 	ret
 
 return:
