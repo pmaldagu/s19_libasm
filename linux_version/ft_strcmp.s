@@ -20,17 +20,10 @@ while:
 	jmp		while
 
 return:
-	cmp		dl, byte [rsi + rax]
-	jl		inferior
-	jg		superior
-	mov		rax, 0
+	mov		rdi, [rdi + rax]
+	and		rdi, 255
+	mov		rsi, [rsi + rax]
+	and		rsi, 255
+	mov		rax, rdi
+	sub		rax, rsi
 	ret
-
-inferior:
-	mov		rax, -1
-	ret
-
-superior:
-	mov		rax, 1
-	ret
-
