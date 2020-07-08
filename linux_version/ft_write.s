@@ -4,8 +4,6 @@
 ft_write:
 	xor		rax, rax
 	xor		rcx, rcx
-	cmp		rsi, 0
-	je		return
 	push	rsi
 	mov		rsi, 1		;Value of the cmd F_GETFD, return fd flags, for fcntl
 	mov		rax, 72		;syscall fctnl
@@ -15,12 +13,10 @@ ft_write:
 	jne		error
 	mov		rax, 1		;syscall write
 	syscall
+	cmp		rsi, 0
+	je		error
 	ret
 
-return:
-	mov		rax, -1
-	ret
-	
 error:
 	mov		rcx, rax
 	neg		rcx

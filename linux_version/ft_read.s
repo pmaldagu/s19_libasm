@@ -1,11 +1,28 @@
 	global	ft_read
+	extern	__errno_location
 
 ft_read:
-	mov		rax, 0
+	xor		rax, rax
+	xor		rcx, rcx
+	push	rsi
+	mov		rsi, 1		;Value of the cmd F_GETFD, return fd flags, for fcntl
+	mov		rax, 72		;syscall fctnl
 	syscall
-	;jc		return
+	pop		rsi
+	cmp		rax, 0
+	jne		error
+	mov		rax, 0		;syscall write
+	syscall
+	cmp		rsi, 0
+	je		error
 	ret
 
-return:
+error:
+	mov		rcx, rax
+	neg		rcx
+	push	rcx
+	call	__errno_location
+	pop		rcx
+	mov		[rax], rcx
 	mov		rax, -1
 	ret
