@@ -26,7 +26,7 @@ return:
 	mov		rax, 0
 	ret
 
-inferior
+inferior:
 	mov		rax, -1
 	ret
 

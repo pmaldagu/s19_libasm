@@ -36,7 +36,7 @@ fclean: clean
 re: fclean all
 
 test: ctest all
-	$(CC) -g -fsanitize=address main.c -L. -lasm
+	$(CC) -no-pie main.c -L. -lasm
 	@./a.out
 
 ctest: fclean
