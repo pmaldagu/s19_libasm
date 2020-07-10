@@ -16,7 +16,7 @@
 - [x] ft_read.s
 
 ### Updates
-- [ ] for linux
+- [x] for linux
 
 ## Ressources
 
