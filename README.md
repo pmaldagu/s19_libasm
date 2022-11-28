@@ -1,22 +1,27 @@
 # Libasm
 
-19 Coding School project
+19 Coding School project (42 Network)
 
-"The aim of this project is to get familiar with assembly language."
+>The aim of this project is to get familiar with assembly language.
 
 ## Status
 
-### Waiting for correction
+Succes: 100%
 
-- [x] ft_strlen.s
-- [x] ft_strcmp.s
-- [x] ft_strcpy.s
-- [x] ft_strdup.s
-- [x] ft_write.s
-- [x] ft_read.s
+## How to
 
-### Updates
-- [x] for linux
+Compile and create the archive libasm.a:
+```
+make
+```
+Delete all objects:
+```
+make clean
+```
+Delete all objects and the archive:
+```
+make fclean
+```
 
 ## Ressources
 
